@@ -1,29 +1,15 @@
-"""
-  Muhammad Verly
-  1301154210
-  IF 39-14
-"""
 
-#Memasukkan Nama 
-nama = input("Masukkan Nama: ").lower()
-
-#Memisahkan kata berdasarkan spasi karena diambil kata pertamanya saja
-pisahKata = nama.split(" ")
-
-#kata yang sudah dipisah dimasukkan ke variabel baru untuk memudahkan proses prediksi
-kataPertama = pisahKata[0][:]
+nama = input("Masukkan Nama: ").lower().split(" ") #Memasukkan Nama & Memisahkan kata berdasarkan spasi karena diambil kata pertamanya saja
+kataPertama = nama[0] #kata yang sudah dipisah dimasukkan ke variabel baru untuk memudahkan proses prediksi
 
 #menghitung masing-masing banyaknya alfabet yang muncul untuk dapat menentukan gender seseorang
 
-##aturan identifikasi alfabet perempuan
-jml_i = kataPertama.count('i')
-jml_a = kataPertama.count('a')
-jml_u = kataPertama.count('u')
-jml_t = kataPertama.count('t')
-jml_e = kataPertama.count('e')
-jml_l = kataPertama.count('l')
+#aturan identifikasi alfabet perempuan
+jml_i = kataPertama.count('i');jml_a = kataPertama.count('a')
+jml_u = kataPertama.count('u');jml_t = kataPertama.count('t')
+jml_e = kataPertama.count('e');jml_l = kataPertama.count('l')
 
-##aturan identifikasi alfabet laki-laki
+#aturan identifikasi alfabet laki-laki
 jml_b = kataPertama.count('b')
 jml_d = kataPertama.count('d')
 jml_o = kataPertama.count('o')
@@ -43,15 +29,11 @@ if (is_laki>is_perempuan):
 else:
     print("Perempuan")
 
-"""
-  Beberapa hasil test prediksi nama :
-  1)Muhammad Verly = Perempuan
-  2)Alda Delas = Perempuan
-  3)Gustav Bagus Samanta = Perempuan
-  4)Dono = Laki-Laki
-  
-  Kesimpulannya, hasil test lebih dominan 'Perempuan', 
-  karena aturan identifikasi alfabet untuk gender perempuan lebih banyak/bervariasi 
-  sehingga walaupun di dunia nyata laki-Laki yang namanya banyak huruf 'a' 
-  contohnya: Jaka, Aditya akan terprediksi sebagai perempuan 
- """
+#  Beberapa hasil test prediksi nama :
+#  1)Muhammad Verly = Perempuan
+#  2)Alda Delas = Perempuan
+#  3)Gustav Bagus Samanta = Perempuan
+#  4)Dono = Laki-Laki
+ 
+#  Kesimpulan dr yang diamati, hasil test lebih dominan 'Perempuan', 
+#  karena aturan identifikasi alfabet untuk gender perempuan lebih banyak/bervariasi
